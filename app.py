@@ -9,6 +9,18 @@ from io import StringIO
 load_dotenv()
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
+# 🔽 Hide Streamlit Menu, Header, and Footer
+st.markdown(
+    """
+    <style>
+        #MainMenu {visibility: hidden;}  /* Hide Streamlit menu */
+        header {visibility: hidden;}  /* Hide header */
+        footer {visibility: hidden;}  /* Hide footer */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # 🎨 Modern Theme (Glassmorphism)
 st.markdown(
     """
